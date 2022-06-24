@@ -1,0 +1,17 @@
+1-Two Sum
+
+https://leetcode.com/problems/two-sum/
+
+This question has two solution:-
+
+1.For Loop 
+We will have two loop with i=0 and j=i+1 an dwill iterate till end of the array to find the exact match.
+Time complexity:->O(n2)
+Spce complexity:-O(1)
+
+
+2.HashMap
+We wiil iterate through the array and find the complenet uusing by subtracting the target and nums[i] and will check if that value is already present in map.If yes the we will the indices of nums[i] and omplement else we will store the nums[i] and its index(i) in the map.
+
+Time complexity:-O(n)
+Space Complexity:-O(n)
