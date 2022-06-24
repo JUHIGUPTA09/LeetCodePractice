@@ -1,0 +1,18 @@
+217-Contains Duplicate
+
+https://leetcode.com/problems/contains-duplicate/
+
+This question has two solution:-
+
+1.Sorting
+We will sort the array,then we will iterate the array and see if nums[i]==nums[i+1] we will break the loop and flag value will true which indicate that the array contain atleast one duplicate
+Time complexity:->O(n logn){Sorting}+O(n)->O(n log n)
+Spce complexity:-O(1)
+
+
+2.HashMap
+We will iterate array will put value as key and frequency as value.The we will iterate the map as see if frequency is greater or equal to 2 and break the loop.flag value will true which indicate that the array contain atleast one duplicate
+
+
+Time complexity:-O(n)
+Space Complexity:-O(n)
