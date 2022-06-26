@@ -13,7 +13,7 @@ Spce complexity:-O(n)
 This is optimal solution for this approach.Here we will create two variable one and two which will keep the number which appear one and twice in array.But the number which appear thrice will not be stored anywhere.
 the main code is:-
 one=(one^x) & ~twice
-twice=(twice^x) & ~twice
+twice=(twice^x) & ~one
 
 Time complexity:-O(n)
 Space Complexity:-O(1)
