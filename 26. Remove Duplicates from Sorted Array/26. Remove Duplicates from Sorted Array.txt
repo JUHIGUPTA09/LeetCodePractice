@@ -4,8 +4,8 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 This question has two solution:-
 
-1.HasHSet
-We will have have a hashset which will store only unique elements.Now we will convertthat into the array using java8 and will replace the value present in the original arraywith the value present in the araay created using set and rest of the value in the original can remain as it is(We dont need to consider those value) and will return the length of newly created array rom set.
+1.TreeSet
+We will have have a Treeset which will store only unique elementsin a sorted way.Now we will convertthat into the array using java8 and will replace the value present in the original arraywith the value present in the araay created using set and rest of the value in the original can remain as it is(We dont need to consider those value) and will return the length of newly created array rom set.
 Time complexity:->O(n)
 Spce complexity:-O(n)
 
