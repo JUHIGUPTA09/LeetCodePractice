@@ -1,0 +1,36 @@
+7-Reverse Integer
+
+https://leetcode.com/problems/reverse-integer/
+
+For reverse Integer first we will intialise a long variable which will hold the reverse Integer.We will run the while loop till n>0 and will perform the following operation:-
+
+result=(result*10)+x%10;
+x=x/10;
+
+Now we need check the overflow condition,if the result is in range of the integer we will return the int(result) else we will return 0.
+
+if(result>=Integer.MIN_VALUE && result<=Integer.MAX_VALUE)
+		{
+			System.out.println((int)result);
+		}
+		else
+		{
+			System.out.println(0);
+		}
+}
+
+
+Note:-
+
+Incase we are not taking result as long we are assuming it as int then we need to overflow by this condition because while reversing the integer overflow may happen and reverse value can chnage and give absurd result.
+
+
+if(numresv<=Integer.MIN_VALUE/10||numresv>=Integer.MAX_VALUE/10)
+
+                {
+			System.out.println((int)result);
+		}
+		else
+		{
+			System.out.println(0);
+		}
