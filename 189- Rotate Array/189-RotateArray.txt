@@ -1,0 +1,45 @@
+189-RotateArray
+https://leetcode.com/problems/rotate-array/
+
+This question has 3 approches
+1.BruteForce
+We will have a while loop at the outer and for loop for iterating the array.We will have 2 varialble previous and temp.previous will always take arr[n-1] value and arr[i] value will get stored temp and arr[i] will take previous value and previous will take tem value.
+
+while(n<=k)
+	{
+		previous=num[num.length-1];
+		for(int j=0;j<num.length;j++)
+		{
+			temp=num[j];
+			num[j]=previous;
+			previous=temp;
+		}
+		n++;
+	}
+
+
+
+Time complexity:->O(n*k)->O(n)k times
+Spce complexity:-O(1)
+
+
+2.New Array
+We will create a new array whih store the reverse value of array.Here we have for loop for iterating the array and for new array index we will use following formula.
+
+arr[(i+k)%num.length]=num[i];
+
+Time complexity:-O(n)
+Space Complexity:-O(n)
+
+
+3.Revserse Method
+
+In this method we will create a function implementing the reverse scenrio for the array.We will have follow the following steps:-
+1.Reverse the array.
+2.Reverse the value from (0 to k-1)
+3.Reverse the value from (k to n-1)
+
+We will get the reverse as the output.
+
+Time complexity:-O(n)
+Space Complexity:-O(1)
