@@ -1,0 +1,15 @@
+Reverse Array
+
+In reverse Array we will have two index start and end where start=0 and end=num.length-1.We will have the while loop which will iterate till start<end and we swap the value present at start and end index with help of temp variable.
+
+This approach will work for both even and odd length array.
+
+Pseudocode:-
+	while(start<end)
+	{
+		temp=arr[start];
+		arr[start]=arr[end];
+		arr[end]=temp;
+		start++;
+		end--;
+	}
