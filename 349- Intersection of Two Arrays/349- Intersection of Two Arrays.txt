@@ -1,0 +1,30 @@
+349- Intersection of Two Arrays
+https://leetcode.com/problems/intersection-of-two-arrays/
+
+The key to this question is Array is unsorted and the intersecting number should appear only once in the result(unique).
+This question has 2 approches
+1.Set
+We will  convert one array into set.Now we will iterate anothe array and will check if set conatins that value or not.If it contains if will get stored in the list and at last ww will return the list converting into array using java8.
+
+List<Integer> l=new ArrayList<Integer>();
+		for(int i:set2)
+		{
+			if(set1.contains(i))
+			{
+			l.add(i);	
+			
+			}
+		}
+		return l.stream().mapToInt(x ->x).toArray();
+
+
+Time complexity:->O(n)+O(m)=O(m+n)
+Spce complexity:-O(n)
+
+
+2.Set-Retain All
+We will convert arrays into set and will do set1.RetainAll(s2).So s1 will only retain the number which are comoon between s1 and s2.
+
+Time complexity:-O(n+m)
+Space Complexity:-O(n+m)
+
