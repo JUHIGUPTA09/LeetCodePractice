@@ -1,0 +1,64 @@
+Intersection of Two Arrays Sorted(Coding Ninja)
+
+https://www.codingninjas.com/codestudio/problems/intersection-of-2-arrays_1082149?source=youtube&campaign=love_babbar_codestudio1&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio1
+
+The key to this question is Array is sorted and  The output should be in the order of elements that occur in the original arrays.
+Ex:-
+arr1=1 2 2 2 3 4
+arr2=2 2 3 3
+
+Intersection:-{2 2 3}
+
+
+This question has 2 approches
+1.Brute Force
+We will use two for loop and ietrate along the array,we will heck the condition 
+	for(int num1:arr1)
+		{
+			for(int num2:arr2)
+			{
+				if(num1<num2)  //As array is sorted in ascending order so if num1 is less than num2 which means other value will be larger 
+				{             //than then num1 so will break the loop.
+					break;
+				}
+				if(num1==num2)     //If number are same
+				{
+					
+					l.add(num2);
+					num2=num2*-1;;
+					break;
+					
+				}
+			}
+		}
+
+
+Time complexity:->O(n)*O(m)=O(m*n)
+Spce complexity:-O(1)
+
+
+2.Two Pointet Approach
+ We will use two pinter apporach for finding the interscetion  as Array is Sorted.
+
+int i=0,j=0;
+		
+		while(i<n &&j<m)
+		{
+			if(arr1[i]<arr2[j])
+			{
+				i++;
+			}
+			else if(arr1[i]==arr2[j])
+			{
+				l.add(arr1[i]);
+				i++;
+				j++;
+			}
+			else
+			{
+				j++;
+			}
+		}
+Time complexity:-O(n)
+Space Complexity:-O(1)
+
