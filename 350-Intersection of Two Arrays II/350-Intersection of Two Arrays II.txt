@@ -1,0 +1,35 @@
+350-Intersection of Two Arrays II
+
+https://leetcode.com/problems/intersection-of-two-arrays-ii/
+
+The key to this question is Array is unsorted and Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
+
+
+This question has 2 approches
+1.Sort Approach + Two Pointer Approach
+We will first sort the both Array and then use two pointer approach to find intersecting array
+
+
+Time complexity:->O(n log n)+O(m log m)
+Space complexity:-O(n)+O(m)-->O(n+m) for sorting alogo
+
+2.HashMap
+We will convert array with smaller length ino hashmap with value as key and frequency as the value.now we will iterate larger length array along with Hashmap
+and will see following cond:-
+
+  List<Integer> l=new ArrayList<>();
+		for(int num:nums2)
+		{
+			if(map.containsKey(num)&& map.get(num)>=1)
+			{
+				l.add(num);
+				
+				map.put(num, map.get(num)-1);
+				
+			}
+		}
+We will get desired result.
+
+Time complexity:-O(n+m)--We will iterate through the both array.
+Space Complexity:-O(min(n,m))
+
