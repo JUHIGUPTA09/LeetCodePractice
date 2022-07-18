@@ -1,0 +1,24 @@
+283-Move zeroes
+https://leetcode.com/problems/move-zeroes/
+
+1.Brute Force
+We will iterate through array and put all the non zero number in the start by having a count variable to keep track and remaining index will be set to zero.
+Time complexity:->O(n)
+Space complexity:-O(1)
+
+2.Two Pointer approach
+We will have two variable right an left.Left will be used to tarck the index of zero and right will be used to iterate through array.If right value is not equal we will swap right and left value.
+	while(right<nums1.length)
+		{
+			if(nums1[right]!=0)
+			{
+			
+				temp=nums1[right];
+				nums1[right]=nums1[left];
+				nums1[left]=temp;
+				left++;			
+			}
+			right++;
+		}
+Time complexity:->O(n)
+Space complexity:-O(1)

@@ -1,0 +1,10 @@
+66-PlusOne
+
+https://leetcode.com/problems/plus-one/
+
+1.Brute Force
+We will have a array we will iterate array from n to 0 and check if (n-1)==9 make it zero,if (n-1)!=0 we will add one and retrun array.If all the digits are 9 then we create another another with (n+1) lenght and put arr[0]=1 beacuse as we are adding one in 9 so it ome 10 ans one gets carry over to next index.
+
+Time complexity:->O(n)
+Space complexity:-O(1)
+
