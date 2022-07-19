@@ -1,0 +1,36 @@
+48.-Rotate Image
+
+https://leetcode.com/problems/rotate-image/
+
+1.Tanspose and reflect
+The methodtosolve this question is summarise in two steps:-
+->Transpose
+first we will trannspose the matrix which is row will be converted to row.
+
+for(int i=0;i<arr.length;i++)
+		{
+			for(int j=i+1;j<arr.length;j++)
+			{
+				temp=arr[i][j];
+				arr[i][j]=arr[j][i];
+				arr[j][i]=temp;
+			}
+		}
+
+->reflect 
+Now we will swipe matrix row and will obtain the result.
+
+for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr.length/2;j++)
+			{
+				temp=arr[i][j];
+				arr[i][j]=arr[i][arr.length-j-1];
+				arr[i][arr.length-j-1]=temp;
+			}
+		}
+
+
+Time complexity:-O(m)
+Space Complexity:-O(1)
+
