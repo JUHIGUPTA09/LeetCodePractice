@@ -1,0 +1,17 @@
+36-Valid Sudoku
+https://leetcode.com/problems/valid-sudoku/
+
+
+1.HashSet
+We will create a Hashset and will iterate through the 2-D array.We will store the value as follows:-
+row="Row-"+i+"-"+Board[i][j]
+col="Col-"+i+"-"+Board[i][j]
+box="Box"+(r/3*3+c/3)+Board[i][j]
+
+and we will check if any value already exist in hashset we will return the flag as false.So sudoku will be invalid.
+
+Time complexity:->O(n2)
+Spce complexity:-O(n2)
+
+
+
